@@ -2,26 +2,60 @@ import "./App.css";
 
 import {
   Map,
-  MapMarker,
-  MapPopup,
+  MapFullscreenControl,
+  MapSearchControl,
   MapTileLayer,
   MapZoomControl,
-} from "./components/ui/map";
+  MapLayers,
+  MapLayersControl,
+} from "@/components/ui/map";
+import MapMarkerList from "./components/specific/MapMarkerList";
 
 function App() {
   return (
     <>
       <div className="h-full">
-        <Map center={[43.6532, -79.3832]} className="h-full">
-          <MapTileLayer />
-          <MapZoomControl />
-          <MapMarker position={[43.6532, -79.3832]}>
-            <MapPopup>A map component for shadcn/ui.</MapPopup>
-          </MapMarker>
+        <Map zoom={3} center={[25, 10]} className="h-full">
+          <MapLayers defaultTileLayer="National Geographic">
+            <MapTileLayer />
+            <MapTileLayer
+              name="National Geographic"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}"
+              attribution="Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC"
+            />
+            <MapTileLayer
+              name="Satellite"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
+            />
+            <MapTileLayer
+              name="Topography"
+              url="https://a.tile.opentopomap.org/{z}/{x}/{y}.png"
+            />
+            <MapLayersControl position="right-4 top-2" />
+          </MapLayers>
+
+          <MapSearchControl position="left-2 top-2" />
+          <MapZoomControl position="right-2 bottom-10" />
+          <MapFullscreenControl position="right-2 bottom-2" />
+
+          <MapMarkerList />
         </Map>
       </div>
     </>
   );
 }
+
+/* function MapLayers() {
+  return (
+    <>
+      <MapTileLayer name="Light" />
+      <MapTileLayer
+        name="NatGeo World Map"
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}"
+      />
+    </>
+  );
+} */
 
 export default App;
