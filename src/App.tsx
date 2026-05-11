@@ -3,7 +3,7 @@ import './App.css'
 function App() {
   return (
     <>
-      Hello world!git 
+      Hello world!
     </>
   )
 }
