@@ -23,6 +23,7 @@ function App() {
               name="National Geographic"
               url="https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}"
               attribution="Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC"
+              maxZoom={12}
             />
             <MapTileLayer
               name="Satellite"
@@ -32,6 +33,7 @@ function App() {
             <MapTileLayer
               name="Topography"
               url="https://a.tile.opentopomap.org/{z}/{x}/{y}.png"
+              maxZoom={17}
             />
             <MapLayersControl position="right-4 top-2" />
             <MapLayerGroup name="Been there">
