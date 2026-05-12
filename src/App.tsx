@@ -8,6 +8,7 @@ import {
   MapZoomControl,
   MapLayers,
   MapLayersControl,
+  MapLayerGroup,
 } from "@/components/ui/map";
 import MapMarkerList from "./components/specific/MapMarkerList";
 
@@ -16,7 +17,7 @@ function App() {
     <>
       <div className="h-full">
         <Map zoom={3} center={[25, 10]} className="h-full">
-          <MapLayers defaultTileLayer="National Geographic">
+          <MapLayers defaultTileLayer="Default" defaultLayerGroups={["Been there"]}>
             <MapTileLayer />
             <MapTileLayer
               name="National Geographic"
@@ -33,13 +34,14 @@ function App() {
               url="https://a.tile.opentopomap.org/{z}/{x}/{y}.png"
             />
             <MapLayersControl position="right-4 top-2" />
+            <MapLayerGroup name="Been there">
+              <MapMarkerList />
+            </MapLayerGroup>
           </MapLayers>
 
           <MapSearchControl position="left-2 top-2" />
           <MapZoomControl position="right-2 bottom-10" />
           <MapFullscreenControl position="right-2 bottom-2" />
-
-          <MapMarkerList />
         </Map>
       </div>
     </>
