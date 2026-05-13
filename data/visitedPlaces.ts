@@ -120,18 +120,6 @@ export const visitedPlaces: VisitedPlace[] = [
     hyperlinks: [],
   },
   {
-    name: "Malaga",
-    coordinates: [36.7213, -4.4214],
-    countryCode: "ESP",
-    type: "city",
-    description: "Mediterranean city in Andalusia.",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/5/58/Malaga_panorama.jpg",
-    visitedTimes: 1,
-    rating: 1,
-    hyperlinks: [],
-  },
-  {
     name: "Palermo",
     coordinates: [38.1157, 13.3615],
     countryCode: "ITA",
@@ -937,7 +925,7 @@ export const visitedPlaces: VisitedPlace[] = [
     hyperlinks: [],
   },
   {
-    name: "Monpellier",
+    name: "Montpellier",
     coordinates: [43.6119, 3.8772],
     countryCode: "FRA",
     type: "city",
@@ -968,6 +956,67 @@ export const visitedPlaces: VisitedPlace[] = [
     description: "Lake Constance city known for Zeppelin aviation history.",
     imageUrl:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Friedrichshafen_Uferpromenade.jpg",
+    visitedTimes: 1,
+    rating: 1,
+    hyperlinks: [],
+  },
+  {
+    name: "New York City",
+    coordinates: [40.7128, -74.006],
+    countryCode: "USA",
+    type: "city",
+    description: "The city that never sleeps.",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/New_York_City_at_night_HDR.jpg",
+    visitedTimes: 1,
+    rating: 1,
+    hyperlinks: [],
+  },
+  {
+    name: "Basel",
+    coordinates: [47.5596, 7.5886],
+    countryCode: "CHE",
+    type: "city",
+    description:
+      "Swiss cultural city on the Rhine at the borders of Switzerland, France, and Germany.",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Basel_Muenster_and_Rhine.jpg",
+    visitedTimes: 1,
+    rating: 1,
+    hyperlinks: [],
+  },
+  {
+    name: "Tarifa",
+    coordinates: [36.0141, -5.6044],
+    countryCode: "ESP",
+    type: "city",
+    description: "Southern Spanish coastal town at the Strait of Gibraltar.",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tarifa_view.jpg",
+    visitedTimes: 1,
+    rating: 1,
+    hyperlinks: [],
+  },
+  {
+    name: "Townsville",
+    coordinates: [-19.2589, 146.8169],
+    countryCode: "AUS",
+    type: "city",
+    description: "Coastal city in Queensland near the Great Barrier Reef.",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Townsville_from_Castle_Hill.jpg",
+    visitedTimes: 1,
+    rating: 1,
+    hyperlinks: [],
+  },
+  {
+    name: "Monument Valley",
+    coordinates: [36.998, -110.0985],
+    countryCode: "USA",
+    type: "nature",
+    description: "Iconic sandstone buttes on the Arizona–Utah border.",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monument_Valley_2.jpg",
     visitedTimes: 1,
     rating: 1,
     hyperlinks: [],
