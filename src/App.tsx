@@ -9,6 +9,7 @@ import {
   MapLayers,
   MapLayersControl,
   MapLayerGroup,
+  MapControlContainer,
 } from "@/components/ui/map";
 
 import MapLayerVisitedPlaces from "./components/specific/MapLayerVisitedPlaces";
@@ -18,7 +19,10 @@ function App() {
     <>
       <div className="h-full">
         <Map zoom={3} center={[25, 10]} className="h-full">
-          <MapLayers defaultTileLayer="Default" defaultLayerGroups={["Been there"]}>
+          <MapLayers
+            defaultTileLayer="Default"
+            defaultLayerGroups={["Been there"]}
+          >
             <MapTileLayer />
             <MapTileLayer
               name="National Geographic"
@@ -36,16 +40,20 @@ function App() {
               url="https://a.tile.opentopomap.org/{z}/{x}/{y}.png"
               maxZoom={17}
             />
-            <MapLayersControl position="right-4 top-2" />
+            <MapLayersControl position="right-3 top-3" />
 
             <MapLayerGroup name="Been there">
               <MapLayerVisitedPlaces />
             </MapLayerGroup>
           </MapLayers>
 
-          <MapSearchControl position="left-2 top-2" />
-          <MapZoomControl position="right-2 bottom-10" />
-          <MapFullscreenControl position="right-2 bottom-2" />
+          <MapControlContainer className="top-3 left-3 bg-popover text-popover-foreground flex flex-col gap-2 rounded-md border p-2 shadow aspect-square w-10">
+            <img src="/LZK_logo.svg" alt="LZK Logo" className="w-full h-auto" />
+          </MapControlContainer>
+
+          <MapSearchControl position="left-14 top-3" />
+          <MapZoomControl position="right-3 bottom-12" />
+          <MapFullscreenControl position="right-3 bottom-3" />
         </Map>
       </div>
     </>
