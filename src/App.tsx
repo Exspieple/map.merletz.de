@@ -3,7 +3,6 @@ import "./App.css";
 import {
   Map,
   MapFullscreenControl,
-  MapSearchControl,
   MapTileLayer,
   MapZoomControl,
   MapLayers,
@@ -13,6 +12,7 @@ import {
 } from "@/components/ui/map";
 
 import MapLayerVisitedPlaces from "./components/specific/MapLayerVisitedPlaces";
+import MapSearchControlsCustom from "./components/specific/MapSearchControlsCustom";
 
 function App() {
   return (
@@ -51,7 +51,8 @@ function App() {
             <img src="/LZK_logo.svg" alt="LZK Logo" className="w-full h-auto" />
           </MapControlContainer>
 
-          <MapSearchControl position="left-14 top-3" />
+          {<MapSearchControlsCustom  position="left-14 top-3" />}
+
           <MapZoomControl position="right-3 bottom-12" />
           <MapFullscreenControl position="right-3 bottom-3" />
         </Map>
