@@ -10,7 +10,8 @@ import {
   MapLayersControl,
   MapLayerGroup,
 } from "@/components/ui/map";
-import MapMarkerList from "./components/specific/MapMarkerList";
+
+import MapLayerVisitedPlaces from "./components/specific/MapLayerVisitedPlaces";
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
               maxZoom={17}
             />
             <MapLayersControl position="right-4 top-2" />
+
             <MapLayerGroup name="Been there">
-              <MapMarkerList />
+              <MapLayerVisitedPlaces />
             </MapLayerGroup>
           </MapLayers>
 
@@ -49,17 +51,5 @@ function App() {
     </>
   );
 }
-
-/* function MapLayers() {
-  return (
-    <>
-      <MapTileLayer name="Light" />
-      <MapTileLayer
-        name="NatGeo World Map"
-        url="https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}"
-      />
-    </>
-  );
-} */
 
 export default App;
